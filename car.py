@@ -18,21 +18,21 @@ class Car(object):
 
 	#Method to check if type of car is a saloon. Return false if it is not
 	def is_saloon(self):
-		if self.type_ == 'saloon':
-			return True
-		else:
+		if self.type_ != 'saloon':
 			return False
-
+		return True
+		
 	#Driving your car
 	def drive(self,car_speed):
 		if car_speed == 3:
-			self.speed == 1000
+			self.speed = 1000
+			return self
 		elif car_speed == 7:
-			self.speed == 77
+			self.speed = 77
+			return self
 		return self
 
-man = Car('MAN', 'Truck', 'trailer')
-print man.drive(3).speed
+
 
 
 
